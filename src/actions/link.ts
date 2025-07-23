@@ -77,4 +77,21 @@ export async function getGlobalStats() {
 
 export async function getQRCode(shortUrl: string) {
   return await QRCode.toDataURL(shortUrl);
+}
+
+// Delete expired links from both Redis and the database
+export async function deleteExpiredLinks() {
+  const now = new Date();
+  // Find expired links
+  const expiredLinks = await prisma.link.findMany({
+    where: { expiresAt: { lt: now } },
+    select: { id: true, shortCode: true }
+  });
+  for (const link of expiredLinks) {
+    // Remove from Redis (if you store shortCode as a key)
+    await redis.del(link.shortCode);
+    // Remove from DB
+    await prisma.link.delete({ where: { id: link.id } });
+  }
+  return { deleted: expiredLinks.length };
 } 
