@@ -22,6 +22,7 @@ A modern URL shortening service built with [Next.js](https://nextjs.org), provid
 - **Styling:** Tailwind CSS, PostCSS
 - **Database:** PostgreSQL (via Prisma ORM)
 - **ORM:** Prisma
+- **Redis:** Upstash redis db for rate limiting
 - **Authentication:** NextAuth.js
 - **Testing:** Jest
 - **Deployment:** Vercel (recommended)
