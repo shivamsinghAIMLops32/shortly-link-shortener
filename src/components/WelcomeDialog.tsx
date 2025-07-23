@@ -12,7 +12,7 @@ export default function WelcomeDialog() {
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-      <div className="bg-white/90 dark:bg-zinc-900/90 rounded-2xl shadow-2xl border border-zinc-100 dark:border-zinc-800 p-8 max-w-md w-full flex flex-col items-center text-center">
+      <div className="bg-white bg-opacity-90 dark:bg-zinc-900 dark:bg-opacity-90 rounded-2xl shadow-2xl border border-zinc-100 dark:border-zinc-800 p-8 max-w-md w-full flex flex-col items-center text-center">
         <h2 className="text-3xl font-extrabold mb-2 text-black dark:text-white">Welcome to Shortly!</h2>
         <p className="text-zinc-600 dark:text-zinc-300 mb-4">
           Shortly is a modern, secure, and beautiful link shortener. <br />
