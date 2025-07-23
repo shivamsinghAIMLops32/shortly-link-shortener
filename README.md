@@ -15,6 +15,20 @@ A modern URL shortening service built with [Next.js](https://nextjs.org), provid
 
 ---
 
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Frontend:** React, Next.js App Router
+- **Styling:** Tailwind CSS, PostCSS
+- **Database:** PostgreSQL (via Prisma ORM)
+- **ORM:** Prisma
+- **Authentication:** NextAuth.js
+- **Testing:** Jest
+- **Deployment:** Vercel (recommended)
+- **Other:** TypeScript, ESLint, Prettier
+
+---
+
 ## Getting Started
 
 ### 1. Clone the repository
